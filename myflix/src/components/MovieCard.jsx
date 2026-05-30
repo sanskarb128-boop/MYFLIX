@@ -1,5 +1,8 @@
 import "../Css/MovieCard.css";
 import { useMovieContext } from "../context/MovieContext";
+import { Link } from "react-router-dom";
+
+
 
 
 function MovieCard({ movie }) {
@@ -13,32 +16,38 @@ function MovieCard({ movie }) {
 
     }
 
-    return <div className="movie-card">
-        <div className="movie-poster">
-            <img
-                src={
-                    movie.poster_path
-                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-                        : "https://dummyimage.com/500x750/333/fff&text=No+Image"
-                }
-                alt={movie.title}
-            />
-            <div className="movie-overlay">
-                <button className={`favorite-btn ${favorite ? "active" : ""}`} onClick={onFavoriteClick}>❤️</button>
+    return (
+        <Link
+            to={`/movie/${movie.id}`}
+            className="movie-card-link">
+            <div className="movie-card">
+                <div className="movie-poster">
+                    <img
+                        src={
+                            movie.poster_path
+                                ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                                : "https://dummyimage.com/500x750/333/fff&text=No+Image"
+                        }
+                        alt={movie.title}
+                    />
+                    <div className="movie-overlay">
+                        <button className={`favorite-btn ${favorite ? "active" : ""}`} onClick={onFavoriteClick}>❤️</button>
+                    </div>
+                </div>
+                <div className="movie-info">
+                    <h3>{movie.title}</h3>
+
+                    <p className="movie-year">
+                        {movie.release_date?.split("-")[0]}
+                    </p>
+
+                    <p className="movie-rating">
+                        ⭐ {movie.vote_average?.toFixed(1)}
+                    </p>
+                </div>
             </div>
-        </div>
-        <div className="movie-info">
-            <h3>{movie.title}</h3>
-
-            <p className="movie-year">
-                {movie.release_date?.split("-")[0]}
-            </p>
-
-            <p className="movie-rating">
-                ⭐ {movie.vote_average?.toFixed(1)}
-            </p>
-        </div>
-    </div>
+        </Link>
+    )
 }
 
 export default MovieCard

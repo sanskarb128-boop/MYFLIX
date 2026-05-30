@@ -13,6 +13,11 @@
   transform: translateY(-8px) scale(1.03);
 }
 
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .movie-poster {
   position: relative;
   aspect-ratio: 2/3;

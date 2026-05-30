@@ -1,0 +1,42 @@
+.movie-details {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.movie-details img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.movie-details h1 {
+    margin-bottom: 1rem;
+}
+
+.movie-details p {
+    margin-bottom: 0.8rem;
+}
+
+.trailer-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.trailer-btn:hover {
+    background: #b20710;
+    transform: scale(1.05);
+}
+
+.trailer-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
