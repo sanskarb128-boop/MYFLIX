@@ -29,7 +29,14 @@ function MovieCard({ movie }) {
         </div>
         <div className="movie-info">
             <h3>{movie.title}</h3>
-            <p>{movie.release_date?.split("-")[0]}</p>
+
+            <p className="movie-year">
+                {movie.release_date?.split("-")[0]}
+            </p>
+
+            <p className="movie-rating">
+                ⭐ {movie.vote_average?.toFixed(1)}
+            </p>
         </div>
     </div>
 }

@@ -1,6 +1,8 @@
 import MovieCard from "../components/MovieCard";
 import { useState, useEffect } from "react";
+import SkeletonCard from "../components/SkeletonCard";
 import { searchMovies, fetchMovies } from "../services/api";
+
 import "../Css/Home.css";
 
 
@@ -62,14 +64,19 @@ function Home() {
 
             {error && <div className="error-message">{error}</div>}
 
-            {loading ? <div className="loading">Loading movies...</div> :
+            {loading ? (
                 <div className="movies-grid">
-                    {movies.map(
-                        (movie) =>
-                        (<MovieCard key={movie.id} movie={movie} />
-                        ))}
-                </div>}
-
+                    {[...Array(8)].map((_, index) => (
+                        <SkeletonCard key={index} />
+                    ))}
+                </div>
+            ) : (
+                <div className="movies-grid">
+                    {movies.map((movie) => (
+                        <MovieCard key={movie.id} movie={movie} />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

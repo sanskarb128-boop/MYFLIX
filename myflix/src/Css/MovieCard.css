@@ -100,6 +100,12 @@
   font-size: 0.9rem;
 }
 
+.movie-rating {
+  color: gold;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
 .user-rating {
   color: #ffd700;
   font-size: 0.9rem;
