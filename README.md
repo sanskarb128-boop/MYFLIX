@@ -122,7 +122,7 @@ Through this project, I gained hands-on experience with:
 
 **Sanskar Bhatt**
 
-* LinkedIn: (Add your LinkedIn URL)
+* LinkedIn: www.linkedin.com/in/sanskar-bhatt-37b76136b
 * GitHub: https://github.com/sanskarb128-boop
 
 ## 📜 License
