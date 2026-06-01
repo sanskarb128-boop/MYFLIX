@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
-import "../Css/NavBar.css";
+import "../Css/Navbar.css";
 
 function NavBar() {
     const [logoHovered, setLogoHovered] = useState(false);
