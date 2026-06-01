@@ -1,45 +1,113 @@
 .home {
-  padding: 2rem 0;
+  padding-top: 0;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-.search-form {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.hero {
   display: flex;
-  gap: 1rem;
-  padding: 0 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 140px 20px 60px;
+  margin: -70px 0 0 0;
+  width: 100%;
   box-sizing: border-box;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.65) 60%,
+      #141414 100%),
+    url("https://image.tmdb.org/t/p/original/628Dep6AxEtDxjZoGP78TsOxYbK.jpg") center/cover no-repeat;
+}
+
+.hero {
+  width: 100vw;
+  margin-left: calc(-1 * ((100vw - 100%) / 2));
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #fc0505;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto 0;
+  padding: 0;
+  gap: 0;
 }
 
 .search-input {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #333;
-  color: white;
+  height: 54px;
+  padding: 0 20px;
   font-size: 1rem;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: none;
+}
+
+.search-input::placeholder {
+  color: #999;
 }
 
 .search-input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #666;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: none;
 }
 
 .search-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #e50914;
-  color: white;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.2s;
+  height: 54px;
+  padding: 0 30px;
+  background: #e50914;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.2s;
   white-space: nowrap;
+  letter-spacing: 0.5px;
 }
 
 .search-button:hover {
-  background-color: #f40612;
+  background: #070000;
+}
+
+.movies-section {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff0505;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #e50914;
 }
 
 
@@ -55,7 +123,7 @@
 
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
   width: 100%;
@@ -110,4 +178,45 @@
   100% {
     opacity: 0.4;
   }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.load-more-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #e50914;
+  padding: 14px 48px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: #e50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+  transform: scale(1.05);
+}
+
+.load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  text-align: center;
+  color: #ff6b6b;
+  padding: 1rem;
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: 6px;
+  margin: 1rem 0;
 }

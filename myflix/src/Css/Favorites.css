@@ -1,33 +1,46 @@
 .favorites {
-  padding: 2rem;
+  padding: 100px 2rem 2rem;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
-
-.favorites-empty {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  margin: 2rem auto;
-  max-width: 600px;
+.favorites-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(229, 9, 20, 0.3);
 }
 
-.favorites-empty h2 {
-  margin-bottom: 1rem;
+.favorites-header h2 {
   font-size: 2rem;
-  color: #ef9105;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-.favorites-empty p {
-  color: #f70202;
-  font-size: 1.2rem;
-  line-height: 1.6;
+.favorites-count {
+  background: #e50914;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
 
-/* Animation for new favorites being added */
+.movies-grid>* {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -40,6 +53,52 @@
   }
 }
 
-.movies-grid>* {
-  animation: fadeIn 0.3s ease-out forwards;
+/* Empty state */
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 1rem;
+}
+
+.favorites-empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 20px rgba(229, 9, 20, 0.5));
+}
+
+.favorites-empty h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.favorites-empty p {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.favorites-empty-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.favorites-empty-btn:hover {
+  background: #f40612;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
 }

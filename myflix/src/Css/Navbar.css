@@ -1,49 +1,120 @@
 .navbar {
-  background-color: #000000;
-  padding: 1rem 2rem;
+  height: 68px;
+  background: linear-gradient(to bottom, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 50px;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-brand {
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo::before {
+  content: "🎬";
   font-size: 1.5rem;
-  font-weight: bold;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', Impact, 'Arial Black', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: #e50914 !important;
+  -webkit-text-fill-color: #e50914 !important;
+  text-shadow:
+    0 0 10px rgba(229, 9, 20, 0.9),
+    0 0 30px rgba(229, 9, 20, 0.6);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Controlled via React state in NavBar.jsx */
+.logo-text.logo-hovered {
+  transform: scale(1.06);
+  letter-spacing: 8px;
+  text-shadow:
+    0 0 20px rgba(229, 9, 20, 1),
+    0 0 50px rgba(229, 9, 20, 0.8),
+    0 0 80px rgba(229, 9, 20, 0.4);
 }
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  gap: 10px;
+  align-items: center;
 }
 
 .nav-link {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  color: #e50914 !important;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(227, 6, 6, 0.1);
+  color: #ffffff !important;
+  background: rgba(229, 9, 20, 0.25) !important;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  background: rgba(229, 9, 20, 0.2);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #e50914, #ff6b6b);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem;
+    padding: 0 20px;
   }
 
-  .navbar-brand {
+  .logo-text {
     font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 
   .navbar-links {
-    gap: 1rem;
+    gap: 5px;
   }
 
   .nav-link {
-    padding: 0.5rem;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 }
