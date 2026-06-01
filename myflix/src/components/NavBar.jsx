@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <Link to="/">MY FLIX</Link>
+                <Link to="/">NETFLIMIX</Link>
             </div>
 
             <div className="navbar-links">
