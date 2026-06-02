@@ -4,7 +4,7 @@ NetFlimix is a modern movie discovery web application built with React.js and Vi
 
 ## 🚀 Live Demo
 
-🔗 https://netflimix.netlify.app/
+🔗 https://myflix-beryl.vercel.app/
 
 ## 💻 GitHub Repository
 
@@ -21,7 +21,7 @@ NetFlimix is a modern movie discovery web application built with React.js and Vi
 * 🎬 Watch movie trailers
 * ⚡ Skeleton loading animations
 * 📱 Responsive design for desktop and mobile
-* 🌐 Deployed on Netlify
+* 🌐 Deployed on vercel
 
 ## 🛠️ Tech Stack
 
@@ -39,7 +39,7 @@ NetFlimix is a modern movie discovery web application built with React.js and Vi
 
 ### Deployment
 
-* Netlify
+* Vercel
 
 ## 📸 Screenshots
 
@@ -118,7 +118,7 @@ Through this project, I gained hands-on experience with:
 * Client-side routing with React Router
 * Local Storage persistence
 * Responsive UI design
-* Deploying React applications using Netlify
+* Deploying React applications using Vercel
 
 ## 👨‍💻 Author
 
