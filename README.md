@@ -45,17 +45,19 @@ NetFlimix is a modern movie discovery web application built with React.js and Vi
 
 ### Home Page
 
-<img width="1919" height="882" alt="image" src="https://github.com/user-attachments/assets/aca8de68-4713-4ea7-a811-33aa6d6b3b11" />
+<img width="1919" height="890" alt="image" src="https://github.com/user-attachments/assets/b24dc466-3dc9-4ec1-b3a8-3b0f62ab9fcd" />
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/e87369eb-7998-443b-b427-334bcae4b5a1" />
 
 
 ### Movie Details Page
-<img width="1919" height="886" alt="image" src="https://github.com/user-attachments/assets/4e04ef3e-c081-4113-a253-b6b27b9283eb" />
-
+<img width="1916" height="862" alt="image" src="https://github.com/user-attachments/assets/7338b988-acee-4b54-b1e1-e4ae3ddd2c7c" />
 
 
 ### Favorites Page
 
-<img width="1919" height="879" alt="image" src="https://github.com/user-attachments/assets/92aa1a2f-8866-4968-8704-728ca22f2326" />
+<img width="1908" height="861" alt="image" src="https://github.com/user-attachments/assets/7b0421f4-099b-4dc8-be92-2e153e8b67d6" />
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/2b8e028a-bb82-40b4-b6d9-c0a3036a7b08" />
+
 
 
 ## 📦 Installation
